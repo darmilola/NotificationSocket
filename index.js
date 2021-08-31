@@ -53,7 +53,7 @@ class Server{
          socket.on('match', function(receiverId,matchFirstname,matchImageUrl) {
       
              let  message = {"receiverId":receiverId,"matchFirstname":matchFirstname,"matchImageUrl":matchImageUrl}
-             socket.to(users.get(receiverId)).emit("onMatch", "matched")
+             socket.to(users.get(receiverId)).emit("onMatch",message)
 
          }); 
 
